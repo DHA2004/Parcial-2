@@ -1,19 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Entidad } from './entidad';
+import { Paciente } from './paciente';
 
 import { environment } from '../../environments/environment.development';
 
 @Injectable({
     providedIn: 'root'
   })
-export class EntidadService {
-    private apiUrl = environment.baseUrl + 'courses.json';
+export class PacienteService {
+    private apiUrl = environment.baseUrl;
 
 constructor(private http: HttpClient) { }
 
-getEntidades(): Observable<Entidad[]> {
-    return this.http.get<Entidad[]>(this.apiUrl);
+getPacientes(): Observable<Paciente[]> {
+    return this.http.get<Paciente[]>(this.apiUrl);
   }
 }

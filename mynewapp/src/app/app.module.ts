@@ -4,8 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EntidadModule } from './entidad/entidad.module';
-import { EquipoModule } from './equipo/equipo.module';
+import { PacienteModule } from './entidad/paciente.module';
+
 
 @NgModule({
   declarations: [
@@ -14,9 +14,8 @@ import { EquipoModule } from './equipo/equipo.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    EntidadModule,
-    HttpClientModule,
-    EquipoModule
+    PacienteModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
