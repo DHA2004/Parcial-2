@@ -1,8 +1,17 @@
-<!-- paciente-detail.component.html -->
-<div class="card" *ngIf="paciente">
-  <div class="card-body">
-    <h5 class="card-title">{{ paciente.nombre }}</h5>
-    <p class="card-text">Edad: {{ paciente.edad }}</p>
-    <p class="card-text">Diagnóstico: {{ paciente.diagnostico }}</p>
+<div *ngIf="paciente">
+  <div class="bg-primary text-white p-2">
+    <h5>{{ paciente.nombre }}</h5>
   </div>
+  <table class="table" style="width: auto;">
+    <tbody>
+      <tr>
+        <th>Edad</th>
+        <td>{{ paciente.edad }}</td>
+      </tr>
+      <tr>
+        <th>Diagnóstico</th>
+        <td>{{ paciente.diagnostico }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

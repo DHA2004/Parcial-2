@@ -1,24 +1,34 @@
 <div class="container-fluid">
-  <div class="col-6">
-    <table class="table">
-      <thead>
-        <tr>
-          <th class="h4">Nombre del paciente</th>
-          <th class="h4">Edad del paciente</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let p of pacientes" (click)="selectedPaciente = p">
-          <td>
-            <dd>{{p.nombre}}</dd>
-          </td>
-          <td>
-            <dd>{{p.edad}}</dd>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <p>Total de pacientes menores de edad: {{ menoresDeEdad }}</p>
+
+  <div class="bg-primary text-white p-3">
+    <h1>PACIENTES</h1>
   </div>
-  <app-paciente-detail [paciente]="selectedPaciente"></app-paciente-detail>
+  <div class="row">
+
+    <div class="col-6">
+      <table class="table table-striped"> 
+        <thead class="thead-dark text-primary"> 
+          <tr>
+            <th class="h4">Nombre del paciente</th>
+            <th class="h4">Edad del paciente</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of pacientes" (click)="selectedPaciente = p">
+            <td>
+              <dd>{{p.nombre}}</dd>
+            </td>
+            <td>
+              <dd>{{p.edad}}</dd>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="text-info">Total de pacientes menores de edad: {{ menoresDeEdad }}</p> 
+    </div>
+
+    <div class="col-6">
+      <app-paciente-detail [paciente]="selectedPaciente"></app-paciente-detail>
+    </div>
+  </div>
 </div>
